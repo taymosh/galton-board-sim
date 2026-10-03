@@ -1,0 +1,1108 @@
+[gd_scene format=3 uid="uid://dj413yc1tejo5"]
+
+[ext_resource type="Script" uid="uid://dagr181rsva3i" path="res://Scripts/balldrop.gd" id="1_3dryh"]
+[ext_resource type="Script" uid="uid://bdjvaxh12rnx7" path="res://Scripts/pegs_layout.gd" id="2_wowpa"]
+[ext_resource type="PackedScene" uid="uid://ckyfl55s5ml8k" path="res://Scenes/peg.tscn" id="3_i6g32"]
+[ext_resource type="Script" uid="uid://gi44th3gcbbq" path="res://Scripts/peg.gd" id="4_1l0tm"]
+
+[node name="Node2D" type="Node2D" unique_id=1939073433]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=247167233]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=644896676]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.07450981, 0.11372549, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=947554954]
+modulate = Color(1, 1, 1, 0.24705882)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_right = 81.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "[Space] to drop balls."
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=846759629]
+unique_name_in_owner = true
+zoom = Vector2(0.5, 0.5)
+
+[node name="balldrop" type="Marker2D" parent="." unique_id=153733389]
+unique_name_in_owner = true
+position = Vector2(0, -550)
+script = ExtResource("1_3dryh")
+
+[node name="Pegs" type="Node2D" parent="." unique_id=787779425]
+position = Vector2(0, -450)
+script = ExtResource("2_wowpa")
+
+[node name="Peg" type="StaticBody2D" parent="Pegs" unique_id=1417050694 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-75, 0)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg2" type="StaticBody2D" parent="Pegs" unique_id=1601412255 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg3" type="StaticBody2D" parent="Pegs" unique_id=1701870483 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(75, 0)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg4" type="StaticBody2D" parent="Pegs" unique_id=1094663319 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-113, 75)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg5" type="StaticBody2D" parent="Pegs" unique_id=1023420058 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-38, 75)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg6" type="StaticBody2D" parent="Pegs" unique_id=134404947 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(37, 75)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg7" type="StaticBody2D" parent="Pegs" unique_id=2130168021 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(112, 75)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg8" type="StaticBody2D" parent="Pegs" unique_id=183247039 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-150, 150)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg9" type="StaticBody2D" parent="Pegs" unique_id=1731305959 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-75, 150)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg10" type="StaticBody2D" parent="Pegs" unique_id=989429921 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(0, 150)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg11" type="StaticBody2D" parent="Pegs" unique_id=684532668 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(75, 150)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg12" type="StaticBody2D" parent="Pegs" unique_id=1639898816 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(150, 150)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg13" type="StaticBody2D" parent="Pegs" unique_id=2137918704 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-188, 225)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg14" type="StaticBody2D" parent="Pegs" unique_id=1414993829 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-113, 225)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg15" type="StaticBody2D" parent="Pegs" unique_id=384856462 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-38, 225)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg16" type="StaticBody2D" parent="Pegs" unique_id=852592961 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(37, 225)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg17" type="StaticBody2D" parent="Pegs" unique_id=2036735169 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(112, 225)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg18" type="StaticBody2D" parent="Pegs" unique_id=1478890249 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(187, 225)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg19" type="StaticBody2D" parent="Pegs" unique_id=407259333 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-225, 300)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg20" type="StaticBody2D" parent="Pegs" unique_id=310132274 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-150, 300)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg21" type="StaticBody2D" parent="Pegs" unique_id=1020600237 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-75, 300)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg22" type="StaticBody2D" parent="Pegs" unique_id=1658265336 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(0, 300)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg23" type="StaticBody2D" parent="Pegs" unique_id=1296062594 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(75, 300)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg24" type="StaticBody2D" parent="Pegs" unique_id=1817371864 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(150, 300)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg25" type="StaticBody2D" parent="Pegs" unique_id=593762046 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(225, 300)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg26" type="StaticBody2D" parent="Pegs" unique_id=701399192 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-263, 375)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg27" type="StaticBody2D" parent="Pegs" unique_id=1921222095 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-188, 375)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg28" type="StaticBody2D" parent="Pegs" unique_id=1208507872 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-113, 375)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg29" type="StaticBody2D" parent="Pegs" unique_id=726802352 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-38, 375)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg30" type="StaticBody2D" parent="Pegs" unique_id=1923059183 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(37, 375)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg31" type="StaticBody2D" parent="Pegs" unique_id=2107934935 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(112, 375)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg32" type="StaticBody2D" parent="Pegs" unique_id=1166152619 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(187, 375)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg33" type="StaticBody2D" parent="Pegs" unique_id=953725238 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(262, 375)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg34" type="StaticBody2D" parent="Pegs" unique_id=1425330612 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-300, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg35" type="StaticBody2D" parent="Pegs" unique_id=1212318983 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-225, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg36" type="StaticBody2D" parent="Pegs" unique_id=306299357 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-150, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg37" type="StaticBody2D" parent="Pegs" unique_id=1844643553 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-75, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg38" type="StaticBody2D" parent="Pegs" unique_id=166968820 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(0, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg39" type="StaticBody2D" parent="Pegs" unique_id=2033829529 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(75, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg40" type="StaticBody2D" parent="Pegs" unique_id=1965252416 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(150, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg41" type="StaticBody2D" parent="Pegs" unique_id=621782371 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(225, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg42" type="StaticBody2D" parent="Pegs" unique_id=148642617 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(300, 450)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg43" type="StaticBody2D" parent="Pegs" unique_id=2101655232 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-338, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg44" type="StaticBody2D" parent="Pegs" unique_id=2131397783 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-263, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg45" type="StaticBody2D" parent="Pegs" unique_id=988867592 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-188, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg46" type="StaticBody2D" parent="Pegs" unique_id=1259378853 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-113, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg47" type="StaticBody2D" parent="Pegs" unique_id=1465249097 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-38, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg48" type="StaticBody2D" parent="Pegs" unique_id=1166724433 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(37, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg49" type="StaticBody2D" parent="Pegs" unique_id=1015668486 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(112, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg50" type="StaticBody2D" parent="Pegs" unique_id=562116442 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(187, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg51" type="StaticBody2D" parent="Pegs" unique_id=677380783 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(262, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg52" type="StaticBody2D" parent="Pegs" unique_id=8899865 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(337, 525)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg53" type="StaticBody2D" parent="Pegs" unique_id=2002594077 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-375, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg54" type="StaticBody2D" parent="Pegs" unique_id=1649811406 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-300, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg55" type="StaticBody2D" parent="Pegs" unique_id=935362863 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-225, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg56" type="StaticBody2D" parent="Pegs" unique_id=1083648418 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-150, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg57" type="StaticBody2D" parent="Pegs" unique_id=308629497 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-75, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg58" type="StaticBody2D" parent="Pegs" unique_id=1822554882 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(0, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg59" type="StaticBody2D" parent="Pegs" unique_id=1456023690 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(75, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg60" type="StaticBody2D" parent="Pegs" unique_id=1826824526 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(150, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg61" type="StaticBody2D" parent="Pegs" unique_id=837689963 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(225, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg62" type="StaticBody2D" parent="Pegs" unique_id=1117126036 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(300, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg63" type="StaticBody2D" parent="Pegs" unique_id=366534607 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(375, 600)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg64" type="StaticBody2D" parent="Pegs" unique_id=1770420933 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-413, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg65" type="StaticBody2D" parent="Pegs" unique_id=141747978 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-338, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg66" type="StaticBody2D" parent="Pegs" unique_id=849067987 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-263, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg67" type="StaticBody2D" parent="Pegs" unique_id=881397619 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-188, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg68" type="StaticBody2D" parent="Pegs" unique_id=1572498418 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-113, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg69" type="StaticBody2D" parent="Pegs" unique_id=1654497100 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-38, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg70" type="StaticBody2D" parent="Pegs" unique_id=1680769636 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(37, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg71" type="StaticBody2D" parent="Pegs" unique_id=1254103280 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(112, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg72" type="StaticBody2D" parent="Pegs" unique_id=1122043990 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(187, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg73" type="StaticBody2D" parent="Pegs" unique_id=68671749 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(262, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg74" type="StaticBody2D" parent="Pegs" unique_id=489643571 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(337, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg75" type="StaticBody2D" parent="Pegs" unique_id=976271756 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(412, 675)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg76" type="StaticBody2D" parent="Pegs" unique_id=1549775119 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-450, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg77" type="StaticBody2D" parent="Pegs" unique_id=1314141919 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-375, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg78" type="StaticBody2D" parent="Pegs" unique_id=1432227173 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-300, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg79" type="StaticBody2D" parent="Pegs" unique_id=480850245 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-225, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg80" type="StaticBody2D" parent="Pegs" unique_id=1012033159 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-150, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg81" type="StaticBody2D" parent="Pegs" unique_id=1914551824 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-75, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg82" type="StaticBody2D" parent="Pegs" unique_id=839684795 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(0, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg83" type="StaticBody2D" parent="Pegs" unique_id=1237216453 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(75, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg84" type="StaticBody2D" parent="Pegs" unique_id=167676120 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(150, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg85" type="StaticBody2D" parent="Pegs" unique_id=1374248091 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(225, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg86" type="StaticBody2D" parent="Pegs" unique_id=1705408558 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(300, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg87" type="StaticBody2D" parent="Pegs" unique_id=269289039 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(375, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg88" type="StaticBody2D" parent="Pegs" unique_id=1567354318 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(450, 750)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg89" type="StaticBody2D" parent="Pegs" unique_id=1947601375 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-488, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg90" type="StaticBody2D" parent="Pegs" unique_id=1585823856 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-413, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg91" type="StaticBody2D" parent="Pegs" unique_id=220263977 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-338, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg92" type="StaticBody2D" parent="Pegs" unique_id=531418909 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-263, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg93" type="StaticBody2D" parent="Pegs" unique_id=1725296427 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-188, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg94" type="StaticBody2D" parent="Pegs" unique_id=1953247744 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-113, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg95" type="StaticBody2D" parent="Pegs" unique_id=1204553531 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-38, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg96" type="StaticBody2D" parent="Pegs" unique_id=1055373349 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(37, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg97" type="StaticBody2D" parent="Pegs" unique_id=33791112 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(112, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg98" type="StaticBody2D" parent="Pegs" unique_id=319969139 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(187, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg99" type="StaticBody2D" parent="Pegs" unique_id=116134410 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(262, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg100" type="StaticBody2D" parent="Pegs" unique_id=510702331 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(337, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg101" type="StaticBody2D" parent="Pegs" unique_id=1439034867 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(412, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg102" type="StaticBody2D" parent="Pegs" unique_id=2028615254 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(487, 825)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg103" type="StaticBody2D" parent="Pegs" unique_id=1082443561 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-525, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg104" type="StaticBody2D" parent="Pegs" unique_id=1330133227 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-450, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg105" type="StaticBody2D" parent="Pegs" unique_id=181201095 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-375, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg106" type="StaticBody2D" parent="Pegs" unique_id=686189974 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-300, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg107" type="StaticBody2D" parent="Pegs" unique_id=170902858 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-225, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg108" type="StaticBody2D" parent="Pegs" unique_id=1755444821 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-150, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg109" type="StaticBody2D" parent="Pegs" unique_id=371240769 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-75, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg110" type="StaticBody2D" parent="Pegs" unique_id=345436441 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(0, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg111" type="StaticBody2D" parent="Pegs" unique_id=607627800 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(75, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg112" type="StaticBody2D" parent="Pegs" unique_id=324364287 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(150, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg113" type="StaticBody2D" parent="Pegs" unique_id=1542879259 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(225, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg114" type="StaticBody2D" parent="Pegs" unique_id=741918536 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(300, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg115" type="StaticBody2D" parent="Pegs" unique_id=1500004498 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(375, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg116" type="StaticBody2D" parent="Pegs" unique_id=600604444 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(450, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg117" type="StaticBody2D" parent="Pegs" unique_id=882700468 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(525, 900)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg118" type="StaticBody2D" parent="Pegs" unique_id=384463919 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-563, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg119" type="StaticBody2D" parent="Pegs" unique_id=872801354 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-488, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg120" type="StaticBody2D" parent="Pegs" unique_id=1652577722 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-413, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg121" type="StaticBody2D" parent="Pegs" unique_id=353521215 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-338, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg122" type="StaticBody2D" parent="Pegs" unique_id=1638828913 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-263, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg123" type="StaticBody2D" parent="Pegs" unique_id=1551142166 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-188, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg124" type="StaticBody2D" parent="Pegs" unique_id=1574922147 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-113, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg125" type="StaticBody2D" parent="Pegs" unique_id=1710708529 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(-38, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg126" type="StaticBody2D" parent="Pegs" unique_id=203868003 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(37, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg127" type="StaticBody2D" parent="Pegs" unique_id=1360422397 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(112, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg128" type="StaticBody2D" parent="Pegs" unique_id=1010366417 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(187, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg129" type="StaticBody2D" parent="Pegs" unique_id=1862210356 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(262, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg130" type="StaticBody2D" parent="Pegs" unique_id=1194402035 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(337, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg131" type="StaticBody2D" parent="Pegs" unique_id=2015841772 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(412, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg132" type="StaticBody2D" parent="Pegs" unique_id=1071381331 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(487, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="Peg133" type="StaticBody2D" parent="Pegs" unique_id=773655236 node_paths=PackedStringArray("collisionshape", "sprite") instance=ExtResource("3_i6g32")]
+unique_name_in_owner = true
+position = Vector2(562, 975)
+script = ExtResource("4_1l0tm")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ckyfl55s5ml8k"]
+
+[ext_resource type="Script" uid="uid://gi44th3gcbbq" path="res://Scripts/peg.gd" id="1_p4b2k"]
+[ext_resource type="Texture2D" uid="uid://bmxrk2hi70n0r" path="res://Assets/ball.svg" id="2_e1ejv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mwb40"]
+
+[node name="Peg" type="StaticBody2D" unique_id=1417050694 node_paths=PackedStringArray("collisionshape", "sprite")]
+script = ExtResource("1_p4b2k")
+collisionshape = NodePath("CollisionShape2D")
+sprite = NodePath("Sprite2D")
+metadata/_custom_type_script = "uid://gi44th3gcbbq"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1372054928]
+shape = SubResource("CircleShape2D_mwb40")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=379285157]
+texture = ExtResource("2_e1ejv")

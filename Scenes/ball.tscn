@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dft4porwhs2c2"]
+
+[ext_resource type="Script" uid="uid://xidawce6fm4l" path="res://Scripts/ball.gd" id="1_ij5cq"]
+[ext_resource type="Texture2D" uid="uid://bmxrk2hi70n0r" path="res://Assets/ball.svg" id="2_ij5cq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_feb5d"]
+radius = 12.5
+
+[node name="Ball" type="CharacterBody2D" unique_id=1522090135]
+collision_layer = 2
+floor_stop_on_slope = false
+floor_snap_length = 0.0
+script = ExtResource("1_ij5cq")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=28399224]
+top_level = true
+z_index = -1
+width = 2.5
+joint_mode = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=712516670]
+shape = SubResource("CircleShape2D_feb5d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1184518369]
+modulate = Color(0.93333334, 0.14509805, 0.37254903, 1)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("2_ij5cq")
