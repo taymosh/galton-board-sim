@@ -7,6 +7,7 @@ func _ready() -> void:
 	line_renderer.default_color = Color.ROYAL_BLUE
 
 var frame_count: int = 0
+var is_dying:bool = false
 
 func _physics_process(delta: float) -> void:
 
@@ -18,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	#	var drag_dir = sign(0 - self.global_position.x)
 	#	velocity.x += drag_dir * 0.05
 	
-	var collision = move_and_collide(velocity)
+	var collision = move_and_collide(velocity * delta)
 	if collision:
 		var collider = collision.get_collider()
 		if collider is Peg:
@@ -29,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		if is_grounded():
 			velocity.y -= 2.5
 
-	if self.global_position.y > 1000:
+	if self.global_position.y > 1000 and !is_dying:
 		die()
 	
 	frame_count += 1
@@ -51,6 +52,7 @@ func create_bounce_ghost():
 	ghost.modulate.a = 0.5
 
 func die():
+	is_dying = true
 	var tween = get_tree().create_tween()
 	tween.tween_property(line_renderer, "modulate", Color(0, 0, 0, 0), 1)
 	tween.finished.connect(queue_free)
